@@ -5,7 +5,7 @@ let visibleIndex = 0;
 
 //** Set up initial function */
 function main() {
-    setInterval(changeVisibleImageInSlidwShow, 3000);
+    setInterval(changeVisibleImageInSlidwShow, 5000);
 }
 
 //** Change Visible Image In Slideshow */

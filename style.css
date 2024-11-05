@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100svh;
+}
+
+.slideshow-container {
+  position: relative;
+}
+
+.slideshow-container img {
+  position: absolute;
+  width: 100%;
+  height: inherit;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+.slideshow-container img.visible {
+  opacity: 1;
+}

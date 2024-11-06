@@ -40,7 +40,8 @@ li:where(.nav__item) {
   flex-direction: column;
 }
 
-.nav__item {
+.nav__link,
+.nav__item--user {
   padding: 1em;
 }
 
@@ -51,16 +52,30 @@ li:where(.nav__item) {
   gap: 1rem;
 }
 
-.nav__link:link {
+.nav__link:link,
+.nav__link:visited {
   font-size: 1.5rem;
   font-weight: 600;
   color: hsl(25, 25%, 90%);
   text-decoration: none;
 }
 
-.nav__item:hover:not(.nav__item--user) {
+.nav__link:hover:not(.nav__item--user) {
   cursor: pointer;
   background-color: hsl(0, 0%, 40%, 0.7);
+  border-right: 5px solid hsl(0, 100%, 35%, 1);
+}
+
+.nav__link:focus {
+  outline: hsl(25, 25%, 90%) dashed 2px;
+  outline-offset: -12px;
+  background-color: hsl(0, 0%, 40%, 0.7);
+  border-right: 4px solid hsl(0, 100%, 35%, 1);
+}
+
+.nav__link:active {
+  background-color: hsl(100, 50%, 50%, 0.5);
+  border-right: 4px solid hsl(0, 100%, 35%, 1);
 }
 
 .nav__icon {

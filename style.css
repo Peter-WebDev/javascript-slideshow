@@ -7,6 +7,20 @@ body {
   min-height: 100svh;
 }
 
+ul:where(.nav__list),
+li:where(.nav__item) {
+  padding: 0;
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  width: fit-content;
+  min-height: 100svh;
+  background-color: hsl(0, 0%, 20%, 0.9);
+  z-index: 1;
+}
+
 .slideshow-container {
   position: relative;
 }

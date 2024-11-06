@@ -4,12 +4,9 @@
 }
 
 body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
   min-height: 100svh;
-}
-
-ul:where(.nav__list),
-li:where(.nav__item) {
-  padding: 0;
 }
 
 .header {
@@ -19,6 +16,34 @@ li:where(.nav__item) {
   min-height: 100svh;
   background-color: hsl(0, 0%, 20%, 0.9);
   z-index: 1;
+}
+
+ul:where(.nav__list),
+li:where(.nav__item) {
+  padding: 0;
+}
+
+.nav__primary {
+  display: flex;
+  flex-direction: column;
+  padding: 2em 3em 2em 1em;
+}
+
+.nav__list {
+  list-style: none;
+}
+
+.nav__item,
+.nav__link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.userimage {
+  max-width: 100%;
+  width: 50px;
+  aspect-ratio: 1;
 }
 
 .slideshow-container {

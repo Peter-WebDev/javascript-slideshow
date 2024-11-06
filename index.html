@@ -6,9 +6,45 @@
     <title>Sidebar och Slideshow</title>
     <link rel="stylesheet" href="style.css" />
     <script src="main.js" defer></script>
+    <script src="https://unpkg.com/feather-icons"></script>
   </head>
   <body>
     <main>
+      <header class="header">
+        <nav class="nav__primary" aria-label="primary">
+          <ul class="nav__list nav__list--user">
+            <li>
+              <img id="userImage" src="" alt="" />
+              <h2 id="userName">Username</h2>
+            </li>
+          </ul>
+          <ul class="nav__list nav__list--primary">
+            <li>
+              <a href="#search"><i data-feather="search"></i>Sök</a>
+            </li>
+            <li>
+              <a href="#search"><i data-feather="home"></i>Hem</a>
+            </li>
+            <li>
+              <a href="#search"><i data-feather="search"></i>Serier</a>
+            </li>
+            <li>
+              <a href="#search"><i data-feather="search"></i>Filmer</a>
+            </li>
+            <li>
+              <a href="#search"><i data-feather="search"></i>Min lista</a>
+            </li>
+            <li>
+              <a href="#search"><i data-feather="search"></i>Nyheter</a>
+            </li>
+          </ul>
+          <ul class="nav__list nav__list--secondary">
+            <li>
+              <a href="#search"><i data-feather="settings"></i>Inställningar</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
       <div id="slideShow" class="slideshow-container">
         <img
           src="https://picsum.photos/id/10/2500/1667"
@@ -19,5 +55,8 @@
         <img src="https://picsum.photos/id/13/2500/1667" alt="" />
       </div>
     </main>
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>

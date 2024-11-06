@@ -6,6 +6,7 @@
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
+  color: hsl(25, 25%, 90%);
   min-height: 100svh;
 }
 
@@ -26,11 +27,21 @@ li:where(.nav__item) {
 .nav__primary {
   display: flex;
   flex-direction: column;
-  padding: 2em 3em 2em 1em;
+  justify-content: space-between;
+  min-height: 100svh;
 }
 
 .nav__list {
   list-style: none;
+}
+
+.nav__list--primary {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav__item {
+  padding: 1em;
 }
 
 .nav__item,
@@ -40,9 +51,25 @@ li:where(.nav__item) {
   gap: 1rem;
 }
 
+.nav__link:link {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: hsl(25, 25%, 90%);
+  text-decoration: none;
+}
+
+.nav__item:hover:not(.nav__item--user) {
+  cursor: pointer;
+  background-color: hsl(0, 0%, 40%, 0.7);
+}
+
+.nav__icon {
+  stroke-width: 3;
+}
+
 .userimage {
   max-width: 100%;
-  width: 50px;
+  width: 75px;
   aspect-ratio: 1;
 }
 

@@ -10,13 +10,26 @@ body {
   min-height: 100svh;
 }
 
+main {
+  position: relative;
+}
+
 .header {
   position: fixed;
   left: 0;
-  width: fit-content;
   min-height: 100svh;
   background-color: hsl(0, 0%, 20%, 0.9);
   z-index: 1;
+}
+
+.header {
+  position: fixed;
+  transition: transform 500ms ease-in-out;
+  transform: translateX(-300px);
+}
+
+.header.opened {
+  transform: translateX(0px);
 }
 
 ul:where(.nav__list),
@@ -80,6 +93,39 @@ li:where(.nav__item) {
 
 .nav__icon {
   stroke-width: 3;
+}
+
+.menu-button {
+  --menu-button-color: hsl(0, 0%, 0%, 0.7);
+  background-color: hsl(25, 25%, 90%);
+  border: 2px solid var(--menu-button-color, hsl(0, 0%, 0%, 0.7));
+  border-radius: 0.25rem;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+  transform: translateX(300px);
+}
+
+.menu-button .line {
+  transition: 500ms;
+  transform-origin: center;
+}
+
+.menu-button:hover :is(.top, .bottom) {
+  y: 50;
+}
+
+.menu-button:hover .top {
+  rotate: 45deg;
+}
+
+.menu-button:hover .middle {
+  opacity: 0;
+}
+
+.menu-button:hover .bottom {
+  rotate: -45deg;
 }
 
 .userimage {

@@ -5,13 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sidebar och Slideshow</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="main.js" defer></script>
+    <script src="main.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
   </head>
   <body>
     <main>
-      <header class="header">
+      <header class="header" id="menuHeader">
         <nav class="nav__primary" aria-label="primary">
+          <button
+            class="menu-button"
+            id="menuButton"
+            aria-controls="primary-navigation">
+            <svg
+              fill="var(--menu-button-color)"
+              class="hamburger"
+              viewBox="0 0 100 100"
+              width="50">
+              <rect
+                class="line top"
+                width="80"
+                height="10"
+                x="10"
+                y="30"></rect>
+              <rect
+                class="line middle"
+                width="80"
+                height="10"
+                x="10"
+                y="50"></rect>
+              <rect
+                class="line bottom"
+                width="80"
+                height="10"
+                x="10"
+                y="70"></rect>
+            </svg>
+          </button>
           <ul class="nav__list nav__list--user">
             <li class="nav__item nav__item--user">
               <img
@@ -72,12 +101,12 @@
       </header>
       <div id="slideShow" class="slideshow-container">
         <img
-          src="https://picsum.photos/id/10/2500/1667"
+          src="https://picsum.photos/id/20/2500/1667"
           class="visible"
           alt="" />
-        <img src="https://picsum.photos/id/11/2500/1667" alt="" />
-        <img src="https://picsum.photos/id/12/2500/1667" alt="" />
-        <img src="https://picsum.photos/id/13/2500/1667" alt="" />
+        <img src="https://picsum.photos/id/21/2500/1667" alt="" />
+        <img src="https://picsum.photos/id/22/2500/1667" alt="" />
+        <img src="https://picsum.photos/id/23/2500/1667" alt="" />
       </div>
     </main>
     <script>
